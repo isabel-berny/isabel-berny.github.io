@@ -1,0 +1,31 @@
+h2 {
+  color: #2d5986;
+}
+
+#IsabelIntro {
+  font-family: 'Petit Formal Script';
+  color: #0059b3;
+  font-size: 50px;
+  text-align: center;
+}
+
+/* .center_first_image {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.center_images {
+  /* text-align: center;
+  display: inline-block; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.caption {
+  font-size: 12px
+}
+
+.boxed {
+  border: 1px solid green ;
+}
