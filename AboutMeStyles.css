@@ -26,6 +26,10 @@ h2 {
   font-size: 12px
 }
 
+.no_space_for_caption {
+  font-size: 1px
+}
+
 .boxed {
   border: 1px solid green ;
 }
