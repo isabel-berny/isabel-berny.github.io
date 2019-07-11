@@ -5,6 +5,15 @@
     <link rel="stylesheet" href="AboutMeStyles.css">
     <link href='https://fonts.googleapis.com/css?family=Petit Formal Script' rel='stylesheet'>
     <script src="aboutMeWebsite.js"> </script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+
     <!-- <style>
       h2 {
         color: #cccc00;
@@ -28,7 +37,7 @@
 
     <!-- <h2>Images on Another Server</h2> -->
     <!-- <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style="width:104px;height:142px;"> -->
-    <p><center><img src="web-images/BuchartGardens.jpeg" alt="Brother and I at Buchart Gardens" style="width:25%;height:auto;margin-right:60px" class="center_images">
+    <p><center><img src="web-images/BuchartGardens.jpeg" alt="Brother and I at Buchart Gardens" width="3024" style="width:25%;height:auto;margin-right:60px" class="center_images">
       <img src="https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12231413/Labrador-Retriever-MP.jpg" alt="Puppy Pic Test" width="729px" style="width:30%;height:auto;">
       <img src="web-images/LittleKidGuateDress.jpg" alt="Little Kid Guatemalan Costume" style="width:25%;height:auto;margin-left:60px" class="center_images"></center></p>
     <!-- <img src="file:///Users/isabelb/Desktop/code/html/html_images/LittleKidGuateDress.jpg" alt="Little Kid Guatemalan Costume" style="width:30%;height:auto"> -->
@@ -70,5 +79,21 @@
     <!-- twitter: -->
     <!-- linkedin: -->
     <div> spotify: isabel.spotify.gt </div>
+    <h2>My Map</h2>
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([37.41, 8.82]),
+          zoom: 4
+        })
+      });
+    </script>
   </body>
 </html>
