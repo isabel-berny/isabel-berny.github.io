@@ -8,17 +8,17 @@ function init(){
   london = ol.proj.fromLonLat([-0.12755, 51.507222]);
 
   view = new ol.View({
-    center: initialLocation;
+    center: initialLocation,
     zoom: 6
   });
 
   map = new ol.Map({
-    target: 'map';
+    target: 'map',
     layers: [
       new ol.layer.Tile({
         source: new ol.source.OSM()
       })
-    ];
+    ],
     loadTilesWhileAnimating: true,
     view: view
   });
@@ -26,7 +26,7 @@ function init(){
 
 function panHome(){
   view.animate({
-    center: london;
+    center: london,
     duration: 2000
   });
 }
