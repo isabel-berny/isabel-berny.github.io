@@ -24,11 +24,21 @@ function init(){
   });
 }
 
-function panHome(){
+function goToLondon(){
   view.animate({
     center: london,
-    duration: 2000
+    duration: 2000,
+    zoom: 6
   });
 }
+
+// var viewport = document.getElementById('map');
+//
+// function getMinZoom() {
+//   var width = viewport.clientWidth;
+//
+// var initialZoom = getMinZoom();
+
+
 
 window.onload = init;
